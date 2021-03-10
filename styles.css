@@ -1,0 +1,198 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem 2rem;
+  background-color: #ff4365;
+}
+
+body fieldset {
+  border: 0;
+}
+
+body button {
+  height: 2rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+body input:focus,
+textarea:focus,
+select:focus,
+textarea:focus,
+button {
+  outline: none;
+}
+
+body input,
+textarea,
+select,
+button {
+  border-radius: 10px;
+  border: 0;
+}
+
+.Form {
+  width: 80%;
+  height: 100%;
+
+  display: grid;
+  justify-items: start;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 1rem;
+
+  border: none;
+  border-radius: 15px;
+  background-color: rgba(84, 13, 110, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+
+  color: #f3fcf0;
+}
+
+.Form label {
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.Header {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.Header > h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.TextInput {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.TextInput > section {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr;
+}
+
+.TextInput input {
+  height: 2rem;
+  border: 2px solid inherit;
+  transition: all 0.3s ease;
+  padding: 0 1rem;
+}
+
+.Stack {
+  display: grid;
+  justify-self: start;
+  align-items: center;
+  justify-items: center;
+  grid-auto-rows: min-content;
+}
+
+.Stack > section {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 0.5rem;
+  align-items: center;
+  justify-items: center;
+  justify-self: start;
+}
+
+.Experience {
+  grid-area: experience;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  justify-items: center;
+  grid-template-rows: min-content 1fr;
+}
+
+.Experience > textarea {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+
+.DevInfo {
+  width: 100%;
+  display: grid;
+  grid-template-areas: "stack experience" "seniority experience" "technology experience";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, min-content);
+  gap: 1rem;
+}
+
+.DevTech {
+  grid-area: stack;
+  display: grid;
+  gap: 1rem;
+}
+
+.Seniority {
+  grid-area: seniority;
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  justify-items: start;
+  grid-template-columns: min-content 1fr;
+}
+
+.Seniority select {
+  height: 2rem;
+  width: 100%;
+  cursor: pointer;
+  background-color: #fff;
+  padding: 0 1rem;
+}
+
+.Technology {
+  grid-area: technology;
+
+  display: grid;
+  gap: 1rem;
+}
+.Technology > section {
+  display: grid;
+  gap: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+  .TextInput {
+    grid-template-columns: 1fr;
+  }
+  .DevInfo {
+    grid-template-areas: "stack" "seniority" "technology" "experience";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, min-content);
+  }
+  .Form {
+    width: 100%;
+  }
+}

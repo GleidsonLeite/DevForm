@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form class="Form">
+      <header class="Header">
+        <h1>Cadastro de Devs</h1>
+        <h2>Complete suas informações</h2>
+      </header>
+      <fieldset class="TextInput">
+        <section>
+          <label for="name">Nome</label>
+          <input id="name" placeholder="Nome" required />
+        </section>
+        <section>
+          <label for="lastName">Sobrenome</label>
+          <input id="lastName" placeholder="Sobrenome" required />
+        </section>
+        <section>
+          <label for="email">Email</label>
+          <input id="email" placeholder="Email" required />
+        </section>
+      </fieldset>
+
+      <section class="DevInfo">
+        <fieldset class="Stack">
+          <label for="stack">De qual lado da aplicação você desenvolve</label>
+          <section>
+            <input id="frontend" name="stack" type="radio" checked />
+            <label for="frontend">Back-end</label>
+            <input id="backend" name="stack" type="radio" />
+            <label for="backend">Front-end</label>
+            <input id="fullstack" name="stack" type="radio" />
+            <label for="fullstack">FullStack</label>
+          </section>
+        </fieldset>
+        <fieldset class="Seniority">
+          <label for="seniority">Senioridade</label>
+          <select name="seniority" id="seniority" required>
+            <option value="" selected>Selecione uma opção</option>
+            <option value="">Júnior</option>
+            <option value="">Pleno</option>
+            <option value="">Senior</option>
+          </select>
+        </fieldset>
+        <fieldset class="Technology">
+          <label>Selecione as tecnologias que você utiliza.</label>
+          <section>
+            <section class="Label">
+              <input type="checkbox" id="html" />
+              <label for="html">HTML</label>
+            </section>
+            <section>
+              <input type="checkbox" id="css" /> <label for="css">CSS</label>
+            </section>
+            <section>
+              <input type="checkbox" id="javascript" />
+              <label for="javascript">JavaScript</label>
+            </section>
+            <section>
+              <input type="checkbox" id="php" /> <label for="php">PHP</label>
+            </section>
+            <section>
+              <input type="checkbox" id="csharp" />
+              <label for="csharp">C#</label>
+            </section>
+            <section>
+              <input type="checkbox" id="python" />
+              <label for="python">Python</label>
+            </section>
+            <section>
+              <input type="checkbox" id="java" />
+              <label for="java">Java</label>
+            </section>
+          </section>
+        </fieldset>
+
+        <fieldset class="Experience">
+          <label for="devExperiences"
+            >Conte um pouco sobre sua experiência</label
+          >
+          <textarea
+            id="devExperiences"
+            placeholder="Fale um pouco sobre sua experiência como dev"
+          ></textarea>
+        </fieldset>
+      </section>
+      <button type="submit">Enviar</button>
+    </form>
+  </body>
+</html>
